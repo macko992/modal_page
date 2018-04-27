@@ -3,25 +3,26 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <script src="js/modal.js"></script>
   <link rel="stylesheet" tylpe="text/css" href="css/style.css" />
   <title>Button js </title>
 </head>
 <body>
-  <body>
-
-    <div class="overlay is-hidden" id="overlay">
+  <div class="container">
+    <!-- modal container -->
+    <div class="is-hidden" id="overlay">
       <div class="modal-content">
-        <button class="btn-applay" onclick="closeModal();">Applay</button>
-
-        <button class="btn-close" onclick="applyModal();">close</button>
-
-
+        <p>
+          <h1>zajebiscie że się udało</h1></p>
+        <!--buttons in modal-->
+        <button id="btn-applay" onclick="applyModal();">ok</button>
+        <button id="btn-close" onclick="closeModal();">cancel</button>
       </div>
     </div>
-    <div class="center">
-      <p><a class="btn1 " onclick="openModal();" href="#">Open modal</a></p>
-    </div>
-    <script type="text/javascript" src="js/modal.js"></script>
-  </body>
+    <!-- button to open modal -->
+    <a id="btn1" onclick="openModal();" href="#">Open modal</a>
+    <!--show text after click modal-->
+    <div class="showText" id="showText"></div>
+  </div>
+  <script type="text/javascript" src="js/modal.js"></script>
+</body>
 </html>
