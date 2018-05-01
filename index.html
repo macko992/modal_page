@@ -4,25 +4,33 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" tylpe="text/css" href="css/style.css" />
+  <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
   <title>Button js </title>
 </head>
-<body>
-  <div class="container">
-    <!-- modal container -->
-    <div class="is-hidden" id="overlay">
-      <div class="modal-content">
-        <p>
-          <h1>zajebiscie że się udało</h1></p>
-        <!--buttons in modal-->
-        <button id="btn-applay" onclick="applyModal();">ok</button>
-        <button id="btn-close" onclick="closeModal();">cancel</button>
-      </div>
+<body class="body">
+
+  <!-- modal container -->
+  <div class="overlay is-hidden" id="overlay">
+    <div class="modal-content">
+      <p>
+        <h1>zajebiscie że się udało</h1></p>
+      <!--buttons in modal-->
+      <button class="btn-applay" onclick="applyModal();">ok</button>
+      <button class="btn-close" onclick="closeModal();">cancel</button>
     </div>
-    <!-- button to open modal -->
-    <a id="btn1" onclick="openModal();" href="#">Open modal</a>
-    <!--show text after click modal-->
-    <div class="showText" id="showText"></div>
   </div>
+  <!-- button to open modal -->
+
+  <div class="divbtn1">
+    <button class="btn1" onclick="openModal();">Open modal</button>
+  </div>
+
+
+
+  <!--show text after click modal-->
+
+  <div class="showText" id="showText"></div>
+
   <script type="text/javascript" src="js/modal.js"></script>
 </body>
 </html>
