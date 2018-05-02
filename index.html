@@ -8,7 +8,6 @@
   <title>Button js </title>
 </head>
 <body class="body">
-
   <!-- modal container -->
   <div class="overlay is-hidden" id="overlay">
     <div class="modal-content">
@@ -19,17 +18,54 @@
       <button class="btn-close" onclick="closeModal();">cancel</button>
     </div>
   </div>
-  <!-- button to open modal -->
+  <!-- title modal -->
 
+
+  <!-- button to open modal -->
   <div class="divbtn1">
+
+
+
+
+
     <button class="btn1" onclick="openModal();">Open modal</button>
+    <button class="btn-input" id="titleBtn">Get Title</button>
+    <button class="btn-textArea" id="contentBtn">Content</button>
+    <button class="btn-final" id="finalyBtn">Show</button>
+  </div>
+  <!--text under 'open modal' button -->
+  <div class="showText" id="showText"></div>
+
+  <!-- title modal -->
+  <div id="titleModal" class="textOverlay">
+    <div class="inputModalContent">
+      <span class="close">&times;</span>
+      <input class="inputForm" type="text" id="title" /><br />
+      <input type="submit" value="Submit" onclick="getTitle()" />
+    </div>
+  </div>
+
+  <!-- content modal -->
+  <div id="contenteModal" class="textOverlay">
+    <div class="textAreaModalContent">
+      <span class="close1">&times;</span>
+      <textarea class="textAreaForm" type="text" id="content"></textarea>
+      <input type="submit" value="Submit" onclick="getContent()" />
+    </div>
+  </div>
+
+  <!-- finaly modal title + cont -->
+  <div id="finalyModal" class="textOverlay">
+    <div class="finalyModalContent">
+      <span class="close2">&times;</span>
+      <div id="titleOut"></div>
+      <div id="contentOut"></div>
+    </div>
+  </div>
+
   </div>
 
 
-
-  <!--show text after click modal-->
-
-  <div class="showText" id="showText"></div>
 
   <script type="text/javascript" src="js/modal.js"></script>
 </body>
