@@ -24,13 +24,16 @@
 .divbtn1 {
   width: 100px;
   height: 520px;
+  display: inline;
+  margin-bottom: 20px;
+
 }
 
 .btn1 {
   letter-spacing: 3px;
   text-decoration: none;
   font-size: 36px;
-  top: 50%;
+  top: 70%;
   left: 50%;
   display: inline-block;
   transform: translate(-50%, -50%);
@@ -87,7 +90,7 @@
   margin: 10% auto 0;
   border-radius: 4px;
   background: #4cb8d0;
-  -webkit-animation-name: zoomInLeft;
+  -webkit-animation-name: slideInLeft;
   -webkit-animation-duration: 1.4s;
   z-index: 2;
 }
@@ -106,25 +109,22 @@
   font-size: 20px;
   color: #11ed5c;
   text-align: center;
-  margin-top: auto;
+  margin-top: 110px;
+}
+@-webkit-keyframes slideInLeft {
+  from {
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+    visibility: visible;
+  }
+
+  to {
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
 }
 
-@-webkit-keyframes zoomInLeft {
-  from {
-    opacity: 0;
-    -webkit-transform: scale3d(0.1, 0.1, 0.1) translate3d(-1000px, 0, 0);
-    transform: scale3d(0.1, 0.1, 0.1) translate3d(-1000px, 0, 0);
-    -webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
-    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
-  }
-  60% {
-    opacity: 1;
-    -webkit-transform: scale3d(0.475, 0.475, 0.475) translate3d(10px, 0, 0);
-    transform: scale3d(0.475, 0.475, 0.475) translate3d(10px, 0, 0);
-    -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
-    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
-  }
-}
+
 
 /* ********************************* */
 /* ===========Task 2 ===============*/
@@ -135,7 +135,7 @@
   letter-spacing: 3px;
   text-decoration: none;
   font-size: 36px;
-  top: 50%;
+  top: 45%;
   left: 30%;
   display: inline-block;
   transform: translate(-50%, -50%);
@@ -143,8 +143,9 @@
   padding: 20px 20px;
   text-align: center;
   border-radius: 5px;
+  border: 0;
   cursor: pointer;
-  background: #00ff57;
+  background: #1ce2a6;
   color: #1b5a62;
 }
 
@@ -152,7 +153,7 @@
   letter-spacing: 3px;
   text-decoration: none;
   font-size: 36px;
-  top: 50%;
+  top: 45%;
   left: 70%;
   display: inline-block;
   transform: translate(-50%, -50%);
@@ -160,28 +161,55 @@
   padding: 20px 20px;
   text-align: center;
   border-radius: 5px;
+  border: 0;
   cursor: pointer;
-  background: #00ff57;
+  background: #c3f141;
+  color: #1b5a62;
+}
+
+.btn-final {
+  letter-spacing: 3px;
+  text-decoration: none;
+  font-size: 36px;
+  top: 40%;
+  left: 50%;
+  display: inline-block;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  padding: 20px 20px;
+  text-align: center;
+  border-radius: 5px;
+  border: 0;
+  cursor: pointer;
+  border: 0;
+  background: #a146f2;
   color: #1b5a62;
 }
 
 
 .inputForm {
   top: 30%;
-  left: 30%;
+  left: 50%;
   display: inline-block;
   transform: translate(-50%, -50%);
   position: absolute;
   text-align: center;
+  width: 200px;
+  height: 30px;
+  border-style: solid;
 }
 
 .textAreaForm {
-  top: 30%;
-  left: 70%;
+  top: 20%;
+  right: 10%;
   display: inline-block;
-  transform: translate(-50%, -50%);
+  transform: translate(-10%, -20%);
   position: absolute;
   text-align: center;
+  width: 250px;
+  height: 95px;
+  border-style: solid;
+  resize: none;
 }
 
 /*Modal input and textarea modal*/
@@ -199,12 +227,11 @@
 }
 
 .inputModalContent {
-    background-color: #fefefe;8
+    background-color: rgba(28, 226, 166, 0.79);
     border: 1px solid #888;
-    width: 80%;
-    left: 30px;
+    left: 50px;
     padding: 20px 30px;
-    width: 600px;
+    width: 400px;
     position: absolute;
     border: 1px solid #888;
     min-height: 100px;
@@ -217,15 +244,14 @@
 }
 
 .textAreaModalContent {
-    background-color: #fefefe;8
+    background-color: rgba(195, 241, 65, 0.79);
     border: 1px solid #888;
-    width: 80%;
     right: 30px;
     padding: 20px 30px;
-    width: 600px;
+    width: 400px;
     position: absolute;
     border: 1px solid #888;
-    min-height: 100px;
+    min-height: 150px;
     margin: 10% auto 0;
     border-radius: 4px;
     -webkit-animation-name: zoomInRight;
@@ -236,10 +262,9 @@
 .finalyModalContent{
   background-color: #fefefe;8
   border: 1px solid #888;
-  width: 80%;
-  left: 0;
+  width: 30%;
+  left:35%;
   padding: 20px 30px;
-  width: 600px;
   position: absolute;
   border: 1px solid #888;
   min-height: 100px;
@@ -248,16 +273,45 @@
   -webkit-animation-name: zoomInDown;
   -webkit-animation-duration: 1.4s;
   z-index: 2;
+}
 
+.finalyModalContent h1{
+  color: #09e043;
+  font-size: 50px;
+  text-align: center;
+}
+
+.finalyModalContent p{
+  font-size: 30px;
+  text-align: justify;
+}
+
+.subbtn{
+  position: absolute;
+  top:60%;
+  left: 30%;
+  text-align: center;
+  border-radius: 5px;
+  border: 0;
+  cursor: pointer;
+}
+
+.subbtn1{
+  position: absolute;
+  top:76%;
+  left: 30%;
+  text-align: center;
+  border-radius: 5px;
+  border: 0;
+  cursor: pointer;
 }
 
 .close {
     color: #aaaaaa;
-    font-size: 28px;
     font-weight: bold;
     position: absolute;
-    right: 30px;
-    top: 50%;
+    right: 30%;
+    top: 70%;
     transform: translateY(-50%);
     &:hover, &:focus{
         color: #000;
@@ -271,8 +325,8 @@
     font-size: 28px;
     font-weight: bold;
     position: absolute;
-    right: 30px;
-    top: 50%;
+    right: 30%;
+  top: 85%;
     transform: translateY(-50%);
     &:hover, &:focus{
         color: #000;
@@ -309,6 +363,23 @@
     opacity: 1;
     -webkit-transform: scale3d(0.475, 0.475, 0.475) translate3d(-10px, 0, 0);
     transform: scale3d(0.475, 0.475, 0.475) translate3d(-10px, 0, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+    animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
+  }
+}
+
+@-webkit-keyframes zoomInLeft {
+  from {
+    opacity: 0;
+    -webkit-transform: scale3d(0.1, 0.1, 0.1) translate3d(-1000px, 0, 0);
+    transform: scale3d(0.1, 0.1, 0.1) translate3d(-1000px, 0, 0);
+    -webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+    animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
+  }
+  60% {
+    opacity: 1;
+    -webkit-transform: scale3d(0.475, 0.475, 0.475) translate3d(10px, 0, 0);
+    transform: scale3d(0.475, 0.475, 0.475) translate3d(10px, 0, 0);
     -webkit-animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
     animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1);
   }

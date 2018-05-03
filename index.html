@@ -14,24 +14,16 @@
       <p>
         <h1>zajebiscie że się udało</h1></p>
       <!--buttons in modal-->
-      <button class="btn-applay" onclick="applyModal();">ok</button>
-      <button class="btn-close" onclick="closeModal();">cancel</button>
+      <button class="btn-applay" name="ok" onclick="applyModal();showBtnId(this)">ok</button>
+      <button class="btn-close" name="close" onclick="closeModal();showBtnId(this)">cancel</button>
     </div>
   </div>
-  <!-- title modal -->
-
-
   <!-- button to open modal -->
   <div class="divbtn1">
-
-
-
-
-
-    <button class="btn1" onclick="openModal();">Open modal</button>
-    <button class="btn-input" id="titleBtn">Get Title</button>
-    <button class="btn-textArea" id="contentBtn">Content</button>
-    <button class="btn-final" id="finalyBtn">Show</button>
+    <button class="btn1" name="Open modal" onClick="openModal(); showBtnId(this)">Open modal</button>
+    <button class="btn-input" name="Get title" onClick="showBtnId(this)" id="titleBtn">Get Title</button>
+    <button class="btn-textArea" name="content" id="contentBtn" onClick="showBtnId(this)">Content</button>
+    <button class="btn-final" onClick="showBtnId(this)" id="finalyBtn">Show</button>
   </div>
   <!--text under 'open modal' button -->
   <div class="showText" id="showText"></div>
@@ -41,7 +33,9 @@
     <div class="inputModalContent">
       <span class="close">&times;</span>
       <input class="inputForm" type="text" id="title" /><br />
-      <input type="submit" value="Submit" onclick="getTitle()" />
+
+      <input type="submit" name="submit" value="Submit" class="subbtn" onclick="getTitle();showBtnId(this);visableFinal()" id="tInput" />
+
     </div>
   </div>
 
@@ -50,7 +44,9 @@
     <div class="textAreaModalContent">
       <span class="close1">&times;</span>
       <textarea class="textAreaForm" type="text" id="content"></textarea>
-      <input type="submit" value="Submit" onclick="getContent()" />
+
+      <input type="submit" value="Submit" class="subbtn1" onclick="getContent();" id="cArea" />
+
     </div>
   </div>
 
@@ -58,15 +54,18 @@
   <div id="finalyModal" class="textOverlay">
     <div class="finalyModalContent">
       <span class="close2">&times;</span>
-      <div id="titleOut"></div>
+      <h1><div id="titleOut"></div></h1>
       <div id="contentOut"></div>
     </div>
   </div>
 
-  </div>
+
+
 
 
 
   <script type="text/javascript" src="js/modal.js"></script>
+
+
 </body>
 </html>
