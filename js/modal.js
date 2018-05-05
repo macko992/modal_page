@@ -54,7 +54,6 @@ span.onclick = function() {
 }
 
 
-
 // Content modal
 var modalTxtAre = document.getElementById('contenteModal');
 var btn = document.getElementById("contentBtn");
@@ -85,6 +84,7 @@ span.onclick = function() {
 
 //Validation with active final button
 function visableFinal(){
+
   document.getElementById('finalyBtn').disabled = false;
 }
 

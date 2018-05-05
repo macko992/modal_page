@@ -1,11 +1,15 @@
 /* ********************************* */
+
 /* ===========Task 1 ===============*/
+
 /* ******************************* */
+
 .body {
   background-color: #1b5a62;
   font-style: oblique;
   font-weight: bold;
 }
+
 
 .is-hidden {
   display: none;
@@ -26,7 +30,7 @@
   height: 520px;
   display: inline;
   margin-bottom: 20px;
-
+  display: inline-block;
 }
 
 .btn1 {
@@ -37,7 +41,7 @@
   left: 50%;
   display: inline-block;
   transform: translate(-50%, -50%);
-  position: absolute;
+  position: fixed;
   padding: 20px 20px;
   text-align: center;
   border-radius: 5px;
@@ -45,7 +49,6 @@
   background: #00ff57;
   color: #1b5a62;
 }
-
 
 .btn-close {
   letter-spacing: 3px;
@@ -87,7 +90,7 @@
   position: absolute;
   border: 1px solid #888;
   min-height: 300px;
-  margin: 10% auto 0;
+  margin: 10% auto;
   border-radius: 4px;
   background: #4cb8d0;
   -webkit-animation-name: slideInLeft;
@@ -111,26 +114,27 @@
   text-align: center;
   margin-top: 110px;
 }
+
 @-webkit-keyframes slideInLeft {
   from {
     -webkit-transform: translate3d(-100%, 0, 0);
     transform: translate3d(-100%, 0, 0);
     visibility: visible;
   }
-
   to {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
   }
 }
 
-
-
 /* ********************************* */
+
 /* ===========Task 2 ===============*/
+
 /* ******************************* */
 
 /* buttons */
+
 .btn-input {
   letter-spacing: 3px;
   text-decoration: none;
@@ -139,7 +143,7 @@
   left: 30%;
   display: inline-block;
   transform: translate(-50%, -50%);
-  position: absolute;
+  position: fixed;
   padding: 20px 20px;
   text-align: center;
   border-radius: 5px;
@@ -157,7 +161,8 @@
   left: 70%;
   display: inline-block;
   transform: translate(-50%, -50%);
-  position: absolute;
+  position: fixed;
+  margin: 0 auto;
   padding: 20px 20px;
   text-align: center;
   border-radius: 5px;
@@ -175,7 +180,7 @@
   left: 50%;
   display: inline-block;
   transform: translate(-50%, -50%);
-  position: absolute;
+  position: fixed;
   padding: 20px 20px;
   text-align: center;
   border-radius: 5px;
@@ -185,7 +190,6 @@
   background: #a146f2;
   color: #1b5a62;
 }
-
 
 .inputForm {
   top: 30%;
@@ -202,7 +206,6 @@
 .textAreaForm {
   top: 20%;
   right: 10%;
-  display: inline-block;
   transform: translate(-10%, -20%);
   position: absolute;
   text-align: center;
@@ -213,57 +216,57 @@
 }
 
 /*Modal input and textarea modal*/
+
 .textOverlay {
-    display: none;
-    position: fixed;
-    z-index: 1;
-    padding-top: 100px;
-    left: 0;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    background: rgba(0, 0, 0, 0.7);
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background: rgba(0, 0, 0, 0.7);
 }
 
 .inputModalContent {
-    background-color: rgba(28, 226, 166, 0.79);
-    border: 1px solid #888;
-    left: 50px;
-    padding: 20px 30px;
-    width: 400px;
-    position: absolute;
-    border: 1px solid #888;
-    min-height: 100px;
-    margin: 10% auto 0;
-    border-radius: 4px;
-    -webkit-animation-name: zoomInLeft;
-    -webkit-animation-duration: 1.4s;
-    z-index: 2;
-
+  background-color: rgba(28, 226, 166, 0.79);
+  border: 1px solid #888;
+  left: 50px;
+  padding: 20px 30px;
+  width: 400px;
+  position: absolute;
+  border: 1px solid #888;
+  min-height: 100px;
+  margin: 10% auto 0;
+  border-radius: 4px;
+  -webkit-animation-name: zoomInLeft;
+  -webkit-animation-duration: 1.4s;
+  z-index: 2;
 }
 
 .textAreaModalContent {
-    background-color: rgba(195, 241, 65, 0.79);
-    border: 1px solid #888;
-    right: 30px;
-    padding: 20px 30px;
-    width: 400px;
-    position: absolute;
-    border: 1px solid #888;
-    min-height: 150px;
-    margin: 10% auto 0;
-    border-radius: 4px;
-    -webkit-animation-name: zoomInRight;
-    -webkit-animation-duration: 1.4s;
-    z-index: 2;
-
-}
-.finalyModalContent{
-  background-color: #fefefe;8
+  background-color: rgba(195, 241, 65, 0.79);
   border: 1px solid #888;
+  right: 30px;
+  padding: 20px 30px;
+  width: 400px;
+  position: absolute;
+  border: 1px solid #888;
+  min-height: 150px;
+  margin: 10% auto 0;
+  border-radius: 4px;
+  -webkit-animation-name: zoomInRight;
+  -webkit-animation-duration: 1.4s;
+  z-index: 2;
+}
+
+.finalyModalContent {
+  background-color: #fefefe;
+  8 border: 1px solid #888;
   width: 30%;
-  left:35%;
+  left: 35%;
   padding: 20px 30px;
   position: absolute;
   border: 1px solid #888;
@@ -275,31 +278,33 @@
   z-index: 2;
 }
 
-.finalyModalContent h1{
+.finalyModalContent h1 {
   color: #09e043;
   font-size: 50px;
   text-align: center;
 }
 
-.finalyModalContent p{
+.finalyModalContent p {
   font-size: 30px;
   text-align: justify;
 }
 
-.subbtn{
+.subbtn {
   position: absolute;
-  top:60%;
+  top: 60%;
   left: 30%;
+  display: inline-block;
   text-align: center;
   border-radius: 5px;
   border: 0;
   cursor: pointer;
 }
 
-.subbtn1{
+.subbtn1 {
   position: absolute;
-  top:76%;
+  top: 76%;
   left: 30%;
+  display: inline-block;
   text-align: center;
   border-radius: 5px;
   border: 0;
@@ -307,32 +312,32 @@
 }
 
 .close {
-    color: #aaaaaa;
-    font-weight: bold;
-    position: absolute;
-    right: 30%;
-    top: 70%;
-    transform: translateY(-50%);
-    &:hover, &:focus{
-        color: #000;
-        text-decoration: none;
-        cursor: pointer;
-    }
+  color: #ffffff;
+  font-weight: bold;
+  position: absolute;
+  right: 30%;
+  top: 70%;
+  transform: translateY(-50%);
+  &:hover, &:focus {
+    color: #ffffff;
+    text-decoration: none;
+    cursor: pointer;
+  }
 }
 
 .close1 {
-    color: #aaaaaa;
-    font-size: 28px;
-    font-weight: bold;
-    position: absolute;
-    right: 30%;
+  color: #aaaaaa;
+  font-size: 28px;
+  font-weight: bold;
+  position: absolute;
+  right: 30%;
   top: 85%;
-    transform: translateY(-50%);
-    &:hover, &:focus{
-        color: #000;
-        text-decoration: none;
-        cursor: pointer;
-    }
+  transform: translateY(-50%);
+  &:hover, &:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
+  }
 }
 
 .close2 {
@@ -343,12 +348,20 @@
   right: 30px;
   top: 50%;
   transform: translateY(-50%);
-  &:hover, &:focus{
-      color: #000;
-      text-decoration: none;
-      cursor: pointer;
+  &:hover, &:focus {
+    color: #000;
+    text-decoration: none;
+    cursor: pointer;
   }
 }
+
+@media all and (max-width:30em){
+ .divbtn1{
+  display:block;
+  margin:0.4em auto;
+ }
+}
+
 
 @-webkit-keyframes zoomInRight {
   from {
@@ -358,7 +371,6 @@
     -webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
     animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
   }
-
   60% {
     opacity: 1;
     -webkit-transform: scale3d(0.475, 0.475, 0.475) translate3d(-10px, 0, 0);
@@ -393,7 +405,6 @@
     -webkit-animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
     animation-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19);
   }
-
   60% {
     opacity: 1;
     -webkit-transform: scale3d(0.475, 0.475, 0.475) translate3d(0, 60px, 0);

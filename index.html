@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1, user-scalable=no">
   <link rel="stylesheet" tylpe="text/css" href="css/style.css" />
   <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
   <title>Button js </title>
@@ -18,12 +18,15 @@
       <button class="btn-close" name="close" onclick="closeModal();showBtnId(this)">cancel</button>
     </div>
   </div>
-  <!-- button to open modal -->
+  <!-- buttons -->
   <div class="divbtn1">
     <button class="btn1" name="Open modal" onClick="openModal(); showBtnId(this)">Open modal</button>
-    <button class="btn-input" name="Get title" onClick="showBtnId(this)" id="titleBtn">Get Title</button>
+
+    <button class="btn-input" name="Get_title" onClick="showBtnId(this)" id="titleBtn">Get Title</button>
+
     <button class="btn-textArea" name="content" id="contentBtn" onClick="showBtnId(this)">Content</button>
-    <button class="btn-final" onClick="showBtnId(this)" id="finalyBtn">Show</button>
+
+    <button class="btn-final" name="FInal" onclick="showBtnId(this)" id="finalyBtn">Show</button>
   </div>
   <!--text under 'open modal' button -->
   <div class="showText" id="showText"></div>
@@ -34,7 +37,7 @@
       <span class="close">&times;</span>
       <input class="inputForm" type="text" id="title" /><br />
 
-      <input type="submit" name="submit" value="Submit" class="subbtn" onclick="getTitle();showBtnId(this);visableFinal()" id="tInput" />
+      <input type="submit" name="submit_title" value="Submit" class="subbtn" onclick="getTitle();showBtnId(this); visableFinal()" id="tInput" />
 
     </div>
   </div>
@@ -43,9 +46,9 @@
   <div id="contenteModal" class="textOverlay">
     <div class="textAreaModalContent">
       <span class="close1">&times;</span>
-      <textarea class="textAreaForm" type="text" id="content"></textarea>
+      <textarea class="textAreaForm" type="text" name="submit_Cont" name2="submit_Cont" id="content"></textarea>
 
-      <input type="submit" value="Submit" class="subbtn1" onclick="getContent();" id="cArea" />
+      <input type="submit" name="submit_Cont" value="Submit" class="subbtn1" onclick="getContent(); showBtnId(this);" id="cArea" />
 
     </div>
   </div>
