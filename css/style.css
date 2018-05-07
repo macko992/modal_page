@@ -13,6 +13,7 @@
 .body a {
   color: #ffffff;
   font-size: 30px;
+  direction: none;
 }
 
 
@@ -35,6 +36,7 @@
   letter-spacing: 3px;
   text-decoration: none;
   font-size: 36px;
+  padding: 3vh;
   display: inline-block;
   transform: translate(-50%, -50%);
   position: relative;
@@ -62,16 +64,14 @@
 .btn-close {
   letter-spacing: 3px;
   text-decoration: none;
-  font-size: 36px;
-  font-weight: bold;
-  display: inline-block;
-  padding: 18px 30px;
-  position: absolute;
-  bottom: 10px;
-  right: 60px;
-  border-radius: 6px;
+  font-size: 20px;
+  margin-bottom: 5px;
+  padding: 3px;
+  text-align: center;
+  border-radius: 5px;
   border: 0;
   cursor: pointer;
+  border: 0;
   background: #d04f4f;
   color: rgba(0, 0, 0, 0.52);
 }
@@ -79,23 +79,20 @@
 .btn-applay {
   letter-spacing: 3px;
   text-decoration: none;
-  font-size: 36px;
-  font-weight: bold;
-  display: inline-block;
-  padding: 18px 30px;
-position: absolute;
-  bottom: 10px;
-  left: 60px;
-  border-radius: 6px;
+  font-size: 20px;
+  margin-bottom: 9px;
+  text-align: center;
+  padding: 3px;
+  border-radius: 5px;
   border: 0;
   cursor: pointer;
+  border: 0;
   background: #5fd779;
   color: rgba(0, 0, 0, 0.52);
 }
 
 .modal-content {
-  padding: 20px 30px;
-  width: 600px;
+  width: 100%;
   position: relative;
   border: 1px solid #888;
   min-height: 300px;
@@ -105,13 +102,20 @@ position: absolute;
   -webkit-animation-name: slideInLeft;
   -webkit-animation-duration: 1.4s;
   z-index: 2;
+  color: #2f2f2f;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  flex-direction: column;
+
 }
 
 .modal-content h1 {
   text-align: center;
   letter-spacing: 1.9px;
   text-decoration: none;
-  position: absolute;
+  position: relative;
   font-size: 46px;
   padding: 40px;
   color: #15494f;

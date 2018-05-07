@@ -62,6 +62,13 @@ title.onclick = function getTitle() {
     alert('Dozwolone są tylko normalne litery');
   } else {
     document.getElementById("titleOut").innerHTML = titleInputVal;
+    var subclose = document.querySelectorAll('.subbtn');
+    subclose.forEach(function(close){
+      close.addEventListener('click', function(e){
+        e.currentTarget.parentNode.parentNode.classList.add('modalHidden');
+
+      });
+    });
   }
   console.log(titleInput);
 }
@@ -69,6 +76,12 @@ title.onclick = function getTitle() {
 //function to get textArea
 content.onclick = function getContent() {
   var contentInput = document.getElementById("content").value;
+    var subclose = document.querySelectorAll('.subbtn');
+  subclose.forEach(function(close){
+    close.addEventListener('click', function(e){
+      e.currentTarget.parentNode.parentNode.classList.add('modalHidden');      
+    });
+  });
   document.getElementById("contentOut").innerHTML = contentInput;
   console.log(content);
 }
@@ -79,7 +92,7 @@ var showFinal = document.getElementById('subbtn2');
 showFinal.addEventListener('click', function() {
   var box = document.getElementById('title');
   var box1 = document.getElementById('content');
-  if (box.value!=='' && box1.value!=='') {
+  if (box.value !== '' && box1.value !== '') {
     document.getElementById('finalBtn').disabled = false;
 
   }
