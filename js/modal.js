@@ -75,10 +75,11 @@ content.onclick = function getContent() {
 
 document.getElementById('finalBtn').disabled = true;
 
-var titcont = document.getElementById('subbtn1');
-titcont.addEventListener('click', function(){
+var showFinal = document.getElementById('subbtn2');
+showFinal.addEventListener('click', function() {
   var box = document.getElementById('title');
-  if (box.value !== ''){
+  var box1 = document.getElementById('content');
+  if (box.value!=='' && box1.value!=='') {
     document.getElementById('finalBtn').disabled = false;
 
   }
