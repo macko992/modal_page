@@ -1,14 +1,12 @@
-<!DOCTYPE html>
+<!Doctype html>
 <html>
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1 maximum-scale=1, user-scalable=no">
   <link rel="stylesheet" tylpe="text/css" href="css/style.css" />
   <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" />
-  <title>Button js </title>
 </head>
 <body class="body">
-  <!-- modal container -->
   <div class="overlay is-hidden" id="overlay">
     <div class="modal-content">
       <p>
@@ -18,57 +16,72 @@
       <button class="btn-close" name="close" onclick="closeModal();showBtnId(this)">cancel</button>
     </div>
   </div>
-  <!-- buttons -->
-  <div class="divbtn1">
-    <button class="btn1" name="Open modal" onClick="openModal(); showBtnId(this)">Open modal</button>
-
-    <button class="btn-input" name="Get_title" onClick="showBtnId(this)" id="titleBtn">Get Title</button>
-
-    <button class="btn-textArea" name="content" id="contentBtn" onClick="showBtnId(this)">Content</button>
-
-    <button class="btn-final" name="FInal" onclick="showBtnId(this)" id="finalyBtn">Show</button>
-  </div>
-  <!--text under 'open modal' button -->
-  <div class="showText" id="showText"></div>
-
-  <!-- title modal -->
-  <div id="titleModal" class="textOverlay">
-    <div class="inputModalContent">
-      <span class="close">&times;</span>
-      <input class="inputForm" type="text" id="title" /><br />
-
-      <input type="submit" name="submit_title" value="Submit" class="subbtn" onclick="getTitle();showBtnId(this); visableFinal()" id="tInput" />
-
+  <section class="section" id="task-one">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-md-offset-6 col-xs-6 col-xs-offset-6">
+          <button class="btn1" name="Open modal" onClick="openModal();">Open modal</button>
+        </div>
+        <div class="row">
+          <div class="col-md-3 col-md-offset-5 col-xs-3 col-xs-offset-5">
+            <div class="showText" id="showText"></div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6 col-md-offset-6 col-xs-6 col-xs-offset-6">
+            <a class="slideDown" href="#task-two">task 2</a>
+          </div>
+        </div>
+      </div>
     </div>
-  </div>
+  </section>
 
-  <!-- content modal -->
-  <div id="contenteModal" class="textOverlay">
-    <div class="textAreaModalContent">
-      <span class="close1">&times;</span>
-      <textarea class="textAreaForm" type="text" name="submit_Cont" name2="submit_Cont" id="content"></textarea>
 
-      <input type="submit" name="submit_Cont" value="Submit" class="subbtn1" onclick="getContent(); showBtnId(this);" id="cArea" />
-
+  <section class="section" id="task-two">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-md-offset-6 col-xs-6 col-xs-offset-6">
+          <a class="slideDown" href="#task-one">task 1</a>
+        </div>
+        <div class="col-md-4 flex-col">
+          <button class="my-btn" data-ref="titleModal" id="titleBtn">Get Title</button>
+        </div>
+        <div class="col-md-4 flex-col">
+          <button class="my-btn" data-ref="finalyModal" id="finalBtn">Show</button>
+        </div>
+        <div class="col-md-4 flex-col">
+          <button class="my-btn" data-ref="contentModal" id="contentBtn">Content</button>
+        </div>
+      </div>
     </div>
-  </div>
 
-  <!-- finaly modal title + cont -->
-  <div id="finalyModal" class="textOverlay">
-    <div class="finalyModalContent">
-      <span class="close2">&times;</span>
-      <h1><div id="titleOut"></div></h1>
-      <div id="contentOut"></div>
+    <div id="titleModal" class="modalOverlay modalHidden">
+      <div class="modalContent">
+        <input class="input" type="text" id="title" autocomplete="off">
+        <input type="submit" value="Submit" class="subbtn" id="subbtn1" data-ref="subbtn1">
+        <span class="close">&times;</span>
+      </div>
     </div>
-  </div>
 
+    <!-- content modal -->
+    <div id="contentModal" class="modalOverlay modalHidden">
+      <div class="modalContent">
+        <textarea class="textarea" type="text" id="content"></textarea>
+        <input type="submit" value="Submit" class="subbtn" id="subbtn2" data-ref="subbtn2">
+        <span class="close">&times;</span>
+      </div>
+    </div>
 
+    <!-- final modal title + cont -->
+    <div id="finalyModal" class="modalOverlay modalHidden">
+      <div class="modalContent">
+        <span class="close">&times;</span>
+        <h1><div id="titleOut"></div></h1>
+        <p id="contentOut"></p>
+      </div>
+    </div>
 
-
-
-
+  </section>
   <script type="text/javascript" src="js/modal.js"></script>
-
-
 </body>
 </html>

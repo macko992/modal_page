@@ -1,8 +1,8 @@
-/* ********************************* */
-
-/* ===========Task 1 ===============*/
-
-/* ******************************* */
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
 .body {
   background-color: #1b5a62;
@@ -10,6 +10,39 @@
   font-weight: bold;
 }
 
+.body a {
+  color: #ffffff;
+  font-size: 30px;
+}
+
+.section {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding-bottom: 25px;
+  background-color: #1D1D1B center/cover no-repeat;
+  color: #fff;
+}
+
+.section *:not(first-child) {
+  margin-top: 30px;
+}
+
+.btn1 {
+  letter-spacing: 3px;
+  text-decoration: none;
+  font-size: 36px;
+  display: inline-block;
+  transform: translate(-50%, -50%);
+  position: relative;
+  text-align: center;
+  border-radius: 5px;
+  cursor: pointer;
+  background: #00ff57;
+  color: #1b5a62;
+}
 
 .is-hidden {
   display: none;
@@ -23,31 +56,6 @@
   height: 100%;
   background: rgba(0, 0, 0, 0.7);
   z-index: 1;
-}
-
-.divbtn1 {
-  width: 100px;
-  height: 520px;
-  display: inline;
-  margin-bottom: 20px;
-  display: inline-block;
-}
-
-.btn1 {
-  letter-spacing: 3px;
-  text-decoration: none;
-  font-size: 36px;
-  top: 70%;
-  left: 50%;
-  display: inline-block;
-  transform: translate(-50%, -50%);
-  position: fixed;
-  padding: 20px 20px;
-  text-align: center;
-  border-radius: 5px;
-  cursor: pointer;
-  background: #00ff57;
-  color: #1b5a62;
 }
 
 .btn-close {
@@ -74,7 +82,7 @@
   font-weight: bold;
   display: inline-block;
   padding: 18px 30px;
-  position: absolute;
+position: absolute;
   bottom: 10px;
   left: 60px;
   border-radius: 6px;
@@ -87,7 +95,7 @@
 .modal-content {
   padding: 20px 30px;
   width: 600px;
-  position: absolute;
+  position: relative;
   border: 1px solid #888;
   min-height: 300px;
   margin: 10% auto;
@@ -109,10 +117,10 @@
 }
 
 .showText {
+  position: relative;
   font-size: 20px;
   color: #11ed5c;
   text-align: center;
-  margin-top: 110px;
 }
 
 @-webkit-keyframes slideInLeft {
@@ -133,17 +141,89 @@
 
 /* ******************************* */
 
-/* buttons */
+.section-two {
+  position: relative;
+}
 
-.btn-input {
+.modalOverlay {
+  position: absolute;
+  width: 100%;
+  max-width: 300px;
+  margin-left: auto;
+  margin-right: auto;
+  min-height: 200px;
+}
+
+.close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  margin-right: 4%;
+  background-color: #ffffff;
+  color: #ffffff;
+}
+
+.modalHidden {
+  display: none;
+}
+
+.subbtn {
+  letter-spacing: 3px;
+  text-decoration: none;
+  font-size: 20px;
+  margin-top: 30px;
+  text-align: center;
+  border-radius: 5px;
+  border: 0;
+  cursor: pointer;
+  border: 0;
+  background: #b687df;
+  color: #1b5a62;
+}
+
+.flex-col {
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+}
+
+.modalContent {
+  color: #2f2f2f;
+  background-color: rgba(79, 125, 114, 0.89);
+  height: 200px;
+  width: 100%;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-content: center;
+  align-items: center;
+  flex-direction: column;
+  -webkit-animation-name: zoomInDown;
+  -webkit-animation-duration: 1.4s;
+  z-index: 2;
+}
+
+.modalContent h1{
+  color: #09e043;
+  font-size: 50px;
+  text-align: center;
+
+}
+
+.modalContent p {
+  font-size: 30px;
+  text-align: justify;
+  color: #ffffff;
+}
+
+.my-btn{
   letter-spacing: 3px;
   text-decoration: none;
   font-size: 36px;
-  top: 45%;
-  left: 30%;
   display: inline-block;
-  transform: translate(-50%, -50%);
-  position: fixed;
+  transform: translate(-50%, );
+  position: relative;
   padding: 20px 20px;
   text-align: center;
   border-radius: 5px;
@@ -153,215 +233,25 @@
   color: #1b5a62;
 }
 
-.btn-textArea {
-  letter-spacing: 3px;
-  text-decoration: none;
-  font-size: 36px;
-  top: 45%;
-  left: 70%;
+.input {
   display: inline-block;
-  transform: translate(-50%, -50%);
-  position: fixed;
-  margin: 0 auto;
-  padding: 20px 20px;
-  text-align: center;
-  border-radius: 5px;
-  border: 0;
-  cursor: pointer;
-  background: #c3f141;
-  color: #1b5a62;
-}
-
-.btn-final {
-  letter-spacing: 3px;
-  text-decoration: none;
-  font-size: 36px;
-  top: 40%;
-  left: 50%;
-  display: inline-block;
-  transform: translate(-50%, -50%);
-  position: fixed;
-  padding: 20px 20px;
-  text-align: center;
-  border-radius: 5px;
-  border: 0;
-  cursor: pointer;
-  border: 0;
-  background: #a146f2;
-  color: #1b5a62;
-}
-
-.inputForm {
-  top: 30%;
-  left: 50%;
-  display: inline-block;
-  transform: translate(-50%, -50%);
-  position: absolute;
+  position: relative;
   text-align: center;
   width: 200px;
-  height: 30px;
+  height: 50px;
   border-style: solid;
+  autocomplete:
 }
 
-.textAreaForm {
-  top: 20%;
-  right: 10%;
-  transform: translate(-10%, -20%);
-  position: absolute;
+.textArea {
+  display: inline-block;
+  position: relative;
   text-align: center;
   width: 250px;
-  height: 95px;
+  height: 195px;
   border-style: solid;
   resize: none;
 }
-
-/*Modal input and textarea modal*/
-
-.textOverlay {
-  display: none;
-  position: fixed;
-  z-index: 1;
-  padding-top: 100px;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  overflow: auto;
-  background: rgba(0, 0, 0, 0.7);
-}
-
-.inputModalContent {
-  background-color: rgba(28, 226, 166, 0.79);
-  border: 1px solid #888;
-  left: 50px;
-  padding: 20px 30px;
-  width: 400px;
-  position: absolute;
-  border: 1px solid #888;
-  min-height: 100px;
-  margin: 10% auto 0;
-  border-radius: 4px;
-  -webkit-animation-name: zoomInLeft;
-  -webkit-animation-duration: 1.4s;
-  z-index: 2;
-}
-
-.textAreaModalContent {
-  background-color: rgba(195, 241, 65, 0.79);
-  border: 1px solid #888;
-  right: 30px;
-  padding: 20px 30px;
-  width: 400px;
-  position: absolute;
-  border: 1px solid #888;
-  min-height: 150px;
-  margin: 10% auto 0;
-  border-radius: 4px;
-  -webkit-animation-name: zoomInRight;
-  -webkit-animation-duration: 1.4s;
-  z-index: 2;
-}
-
-.finalyModalContent {
-  background-color: #fefefe;
-  8 border: 1px solid #888;
-  width: 30%;
-  left: 35%;
-  padding: 20px 30px;
-  position: absolute;
-  border: 1px solid #888;
-  min-height: 100px;
-  margin: 10% auto 0;
-  border-radius: 4px;
-  -webkit-animation-name: zoomInDown;
-  -webkit-animation-duration: 1.4s;
-  z-index: 2;
-}
-
-.finalyModalContent h1 {
-  color: #09e043;
-  font-size: 50px;
-  text-align: center;
-}
-
-.finalyModalContent p {
-  font-size: 30px;
-  text-align: justify;
-}
-
-.subbtn {
-  position: absolute;
-  top: 60%;
-  left: 30%;
-  display: inline-block;
-  text-align: center;
-  border-radius: 5px;
-  border: 0;
-  cursor: pointer;
-}
-
-.subbtn1 {
-  position: absolute;
-  top: 76%;
-  left: 30%;
-  display: inline-block;
-  text-align: center;
-  border-radius: 5px;
-  border: 0;
-  cursor: pointer;
-}
-
-.close {
-  color: #ffffff;
-  font-weight: bold;
-  position: absolute;
-  right: 30%;
-  top: 70%;
-  transform: translateY(-50%);
-  &:hover, &:focus {
-    color: #ffffff;
-    text-decoration: none;
-    cursor: pointer;
-  }
-}
-
-.close1 {
-  color: #aaaaaa;
-  font-size: 28px;
-  font-weight: bold;
-  position: absolute;
-  right: 30%;
-  top: 85%;
-  transform: translateY(-50%);
-  &:hover, &:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-  }
-}
-
-.close2 {
-  color: #aaaaaa;
-  font-size: 28px;
-  font-weight: bold;
-  position: absolute;
-  right: 30px;
-  top: 50%;
-  transform: translateY(-50%);
-  &:hover, &:focus {
-    color: #000;
-    text-decoration: none;
-    cursor: pointer;
-  }
-}
-
-@media all and (max-width:30em){
- .divbtn1{
-  display:block;
-  margin:0.4em auto;
- }
-}
-
 
 @-webkit-keyframes zoomInRight {
   from {

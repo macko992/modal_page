@@ -24,9 +24,37 @@ function applyModal() {
 /* ===========Task 2 ===============*/
 /* ******************************* */
 
-//function to get input and textArea
-//validation related to only lirrers
-function getTitle() {
+
+// open modal
+var buttons = document.querySelectorAll('.my-btn');
+buttons.forEach(function(btn) {
+  if (btn.getAttribute('data-ref')) {
+    btn.addEventListener('click', function() {
+      document.querySelectorAll('.modalOverlay').forEach(function(overlay) {
+        overlay.classList.add('modalHidden');
+      });
+      var ref = btn.getAttribute('data-ref');
+      var modal = document.getElementById(ref);
+      console.log(btn);
+      modal.classList.remove('modalHidden');
+    })
+  }
+});
+
+// close modal
+var closers = document.querySelectorAll('.close');
+closers.forEach(function(close) {
+  close.addEventListener('click', function(e) {
+    e.currentTarget.parentNode.parentNode.classList.add('modalHidden');
+    console.log(close);
+  });
+});
+
+var title = document.getElementById('subbtn1');
+var content = document.getElementById('subbtn2');
+
+//function to get input
+title.onclick = function getTitle() {
   var titleInput = document.getElementById("title");
   var titleInputVal = titleInput.value;
   var condition = /[a-zA-Z]/;
@@ -35,62 +63,23 @@ function getTitle() {
   } else {
     document.getElementById("titleOut").innerHTML = titleInputVal;
   }
-
+  console.log(titleInput);
 }
+
 //function to get textArea
-function getContent() {
+content.onclick = function getContent() {
   var contentInput = document.getElementById("content").value;
   document.getElementById("contentOut").innerHTML = contentInput;
-}
-//Title modal
-var modalInput = document.getElementById('titleModal');
-var btn = document.getElementById("titleBtn");
-var span = document.getElementsByClassName("close")[0];
-btn.onclick = function() {
-  modalInput.style.display = "block";
-}
-span.onclick = function() {
-  modalInput.style.display = "none";
+  console.log(content);
 }
 
+document.getElementById('finalBtn').disabled = true;
 
-// Content modal
-var modalTxtAre = document.getElementById('contenteModal');
-var btn = document.getElementById("contentBtn");
-var span = document.getElementsByClassName("close1")[0];
-btn.onclick = function() {
-  modalTxtAre.style.display = "block";
-}
-span.onclick = function() {
-  modalTxtAre.style.display = "none";
-}
+var titcont = document.getElementById('subbtn1');
+titcont.addEventListener('click', function(){
+  var box = document.getElementById('title');
+  if (box.value !== ''){
+    document.getElementById('finalBtn').disabled = false;
 
-
-
-// Finaly modal title + content
-var modalFinal = document.getElementById('finalyModal');
-var btn = document.getElementById("finalyBtn");
-var span = document.getElementsByClassName("close2")[0];
-var titval = document.getElementById('title').value;
-document.getElementById('finalyBtn').disabled = true;
-btn.onclick = function() {
-  modalFinal.style.display = "block";
-}
-span.onclick = function() {
-  modalFinal.style.display = "none";
-}
-
-
-
-//Validation with active final button
-function visableFinal(){
-
-  document.getElementById('finalyBtn').disabled = false;
-}
-
-
-//show id by click buttons
-function showBtnId(button){
-  var button_name = button.getAttribute('name');
- 	    console.log(button_name);
-}
+  }
+});
