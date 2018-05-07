@@ -16,3 +16,83 @@ function applyModal() {
   overlay.classList.add("is-hidden");
   text.innerHTML = "piknie Panie to żeś uczynił </br> (chyba  :| )";
 }
+<<<<<<< HEAD
+=======
+/* ********************************* */
+/* ===========Task 2 ===============*/
+/* ******************************* */
+
+
+// open modal
+var buttons = document.querySelectorAll('.my-btn');
+buttons.forEach(function(btn) {
+  if (btn.getAttribute('data-ref')) {
+    btn.addEventListener('click', function() {
+      document.querySelectorAll('.modalOverlay').forEach(function(overlay) {
+        overlay.classList.add('modalHidden');
+      });
+      var ref = btn.getAttribute('data-ref');
+      var modal = document.getElementById(ref);
+      console.log(btn);
+      modal.classList.remove('modalHidden');
+    })
+  }
+});
+
+// close modal
+var closers = document.querySelectorAll('.close');
+closers.forEach(function(close) {
+  close.addEventListener('click', function(e) {
+    e.currentTarget.parentNode.parentNode.classList.add('modalHidden');
+    console.log(close);
+  });
+});
+
+var title = document.getElementById('subbtn1');
+var content = document.getElementById('subbtn2');
+
+//function to get input
+title.onclick = function getTitle() {
+  var titleInput = document.getElementById("title");
+  var titleInputVal = titleInput.value;
+  var condition = /[a-zA-Z]/;
+  if (!condition.test(titleInputVal)) {
+    alert('Dozwolone są tylko normalne litery');
+  } else {
+    document.getElementById("titleOut").innerHTML = titleInputVal;
+    var subclose = document.querySelectorAll('.subbtn');
+    subclose.forEach(function(close){
+      close.addEventListener('click', function(e){
+        e.currentTarget.parentNode.parentNode.classList.add('modalHidden');
+
+      });
+    });
+  }
+  console.log(titleInput);
+}
+
+//function to get textArea
+content.onclick = function getContent() {
+  var contentInput = document.getElementById("content").value;
+    var subclose = document.querySelectorAll('.subbtn');
+  subclose.forEach(function(close){
+    close.addEventListener('click', function(e){
+      e.currentTarget.parentNode.parentNode.classList.add('modalHidden');      
+    });
+  });
+  document.getElementById("contentOut").innerHTML = contentInput;
+  console.log(content);
+}
+
+document.getElementById('finalBtn').disabled = true;
+
+var showFinal = document.getElementById('subbtn2');
+showFinal.addEventListener('click', function() {
+  var box = document.getElementById('title');
+  var box1 = document.getElementById('content');
+  if (box.value !== '' && box1.value !== '') {
+    document.getElementById('finalBtn').disabled = false;
+
+  }
+});
+>>>>>>> ea5690d... Reapair modal in first task
